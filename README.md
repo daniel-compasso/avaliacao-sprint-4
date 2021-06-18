@@ -1,5 +1,5 @@
 # Avaliação Sprint 4
-<p align="center"><img src = "https://lh3.googleusercontent.com/proxy/hjzUttH1tA_AqAw7yPz6AENF-1xIhLiugHsRgVnsu3hk9TiU-3wt4sqolS5zlBaLrlz4JUG_Vy6XLiK929eL3CGfHMtJTdMmlJEpol_Xk-76xwUxOvtPJq27"></p>
+<p align="center"><img src = "https://rogertakemiya.com.br/wp-content/uploads/2017/06/encontre-o-cep-pelo-endereco-1280x720.png"></p>
 
 ### Notícias
 - Capturados através do site [viacep](https://viacep.com.br/)
