@@ -13,6 +13,7 @@ intents:
 - deny
 - mood_unhappy
 - bot_challenge
+
 slots:
   pesquisa:
     type: text

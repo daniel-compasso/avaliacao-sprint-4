@@ -77,7 +77,6 @@ class ValidaTituloBusca(FormValidationAction):
         def mostrar_resultado(video):
             dispatcher.utter_message(text=('Título: ' + video['TituloDoVideo']))
             dispatcher.utter_message(text=('Url: https://www.youtube.com/watch?v=' + video['VideoId']))
-            dispatcher.utter_message(text=('================================================================================'))
         
         if db.resultados.count_documents({'CacheKey':pesquisa}) > 0:
             print('Essa pesquisa já existe na nossa cache!')

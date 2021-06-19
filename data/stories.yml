@@ -11,10 +11,9 @@ stories:
 #    - slot_was_set:
 #      - nome: Caio
 
-- story: interactive_story_1
+- story: pesquisar_video
   steps:
   - intent: greet
-  - action: utter_greet
   - action: pesquisa_form
   - active_loop: pesquisa_form
   - slot_was_set:

@@ -82,6 +82,7 @@ nlu:
     - Você é um humano?
     - estou falando com um bot?
     - estou falando com um humano?
+    
 - intent: pesquisa
   examples: |
     - playlist rock
