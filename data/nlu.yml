@@ -1,92 +1,101 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
+    - Ei
+    - Olá
+    - Oi
+    - Fala ae
+    - Eae
+    - Oiee
+    - oi
+    - olá, eu sou o [Daniel](nome)
+    - eaí [Bruno](nome)
+    - salve [Matheus](nome)
+    - Me chamo [João da Silva](nome)
+    - [Renato Russo](nome), muito prazer
+    - Meu nome é [Maria Silvina](nome)
+    - [Daniel](nome)
+    - oi eu sou [João](nome)
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
+    - chau
+    - Até mais
+    - Flw
+    - adeus
+    - Até mazes
+    - Fui
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
+    - sim
+    - isso
+    - tá
+    - ok
+    - com certeza
+    - isso aí
+    - pode
 - intent: deny
   examples: |
-    - no
+    - não
     - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
+    - Nunca
+    - Acho que não
+    - não gosto disso
+    - de jeito nenhum
+    - Na verdade não
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
+    - perfeito
+    - excelente
+    - incrível
+    - sentindo-se como um rei
+    - Maravilhoso
+    - Estou me sentindo muito bem
+    - Estou estou ótimo
+    - tudo ótimo
+    - super animado
+    - to legal
+    - tudo legal
+    - bem
+    - ótimo
+    - blz
+    - Bem
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
+    - meu dia foi horrível
+    - Estou triste
+    - Não me sinto muito bem
+    - Estou desapontado
+    - super triste
+    - Eu estou tão triste
+    - triste
+    - muito triste
+    - infeliz
+    - não é bom
+    - não muito bom
+    - extremamente triste
+    - tão saad
+    - tão triste
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Você é um robô?
+    - Você é um humano?
+    - estou falando com um bot?
+    - estou falando com um humano?
+- intent: pesquisa
+  examples: |
+    - playlist rock
+    - videos de star wars
+    - guitarra
+    - rock
+    - sertanejo
+    - playlist sertanejo
+    - playlist metal
+    - metal
+    - star wars
+    - sabre de luz
+    - vingadores
+    - iron man
+    - homem de ferro
+    - homem aranha
+    - iron

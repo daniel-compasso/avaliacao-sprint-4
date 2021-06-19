@@ -1,34 +1,66 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+  
+intents:
+- greet
+- pesquisa
+- mood_great
+- search_video
+- goodbye
+- affirm
+- deny
+- mood_unhappy
+- bot_challenge
+slots:
+  pesquisa:
+    type: text
+    influence_conversation: true
+  
+  nome:
+    type: text
+    influence_conversation: true
+
+responses:
+  utter_greet:
+  - text: Ei! Qual é o seu nome?
+  utter_cheer_up:
+  - text: 'Aqui está algo para animá-lo:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_ask_pesquisa:
+  - text: Qual video quer ver hoje?
+  utter_happy:
+  - text: Dahora!
+  utter_goodbye:
+  - text: Tchau
+  utter_iamabot:
+  - text: Eu sou um bot, criado para que você faça buscas dos seus videos favoritos do  YouTube.
+  utter_show_result:
+  - text: 'Aqui está o que eu encontrei'
+  utter_desculpa:
+  - text: Desculpe, estou ainda aprendendo, poderia escrever de outra forma?
+
+actions:
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- utter_show_result
+- validate_pesquisa_form
+- validate_nome_form
+
+entities:
+- nome
+
+forms:
+  pesquisa_form:
+    required_slots:
+      pesquisa:
+      - type: from_text
+        entity: pesquisa
+
+  nome_form:
+    required_slots:
+      nome:
+      - type: from_entity
+        entity: nome
