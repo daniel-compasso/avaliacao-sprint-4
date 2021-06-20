@@ -1,0 +1,27 @@
+version: "2.0"
+
+stories:
+
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_wait 
+  - action: consulta_api
+  - action: utter_greet
+  - action: utter_menu
+  - action: cria_menu                                                    
+  - action: option_form                                                   
+  - active_loop: option_form 
+  - slot_was_set:
+    - requested_slot: option
+  - slot_was_set:
+    - option: '1'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_option_form
+  - action: utter_goodbye
+  - action: action_restart
+
+

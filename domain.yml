@@ -1,0 +1,48 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- names
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- options
+- train
+
+responses:
+  utter_wait:
+  - text: Olá padawan, um segundo por favor!
+  utter_greet:
+  - text: Me chamo L3-37, sou um bot especializado no universo de Star Wars
+  utter_menu:
+  - text: 'Escolha a seguir qual informação você deseja consultar:'
+  utter_goodbye:
+  - text: Que a força esteja com você!
+  utter_shell:
+  - text: NO RASA SHELL!!
+actions:
+- consulta_api
+- cria_menu
+- utter_greet
+- utter_menu
+- utter_wait
+- validate_option_form
+
+slots:
+  option:
+    type: text
+    influence_conversation: true
+  senderid:
+    type: text
+    influence_conversation: false
+
+forms:
+  option_form:
+    required_slots:
+      option:
+      - type: from_text

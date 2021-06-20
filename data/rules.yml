@@ -1,0 +1,33 @@
+version: "2.0"
+
+rules:
+
+- rule: inicia o bot
+  steps:
+  - intent: greet
+  - action: utter_wait  
+  - action: consulta_api
+  - action: utter_greet
+  - action: utter_menu
+  - action: cria_menu
+  - action: option_form
+  - active_loop: option_form
+
+
+- rule: desliga formulario do option
+  condition:
+  - active_loop: option_form
+  steps:
+  - action: option_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: validate_option_form
+  - action: utter_goodbye
+  - action: action_restart
+
+- rule: easter egg
+  steps:
+  - intent: train
+  - action: utter_shell  
+
