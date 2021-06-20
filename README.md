@@ -2,10 +2,10 @@
 <p align="center"><img src = "https://kanto.legiaodosherois.com.br/w760-h398-cfill/wp-content/uploads/2019/12/legiao_RZ8tuWfaV2dYPDrnq49lIL0pcCJ7T3E_vAjgQUoxHh.png.jpeg"></p>
 
 ## Descrição
-- Desenvolvimento de um rasa.
+- Desenvolvimento de um chatbot rasa.
 - Consumo da api SWAPI.
 - Armazena os dados no mongodb.
-- Consumo dos dados armazenados no mongodb de acordo com a escolha do usuário
+- Consumo dos dados armazenados no mongodb de acordo com a escolha do usuário.
 
 ## Usabilidade
 1. Abra o terminal do vscode "ctrl+j", e execute o comando "rasa train".
@@ -20,8 +20,10 @@
 - Python3
 - MongoDB
 - rasa
-- spacy
+- spaCy
+- pymongo
 - webchat
+- html/css
 
 ## Autores
 - <b>Gustavo Marcello</b>
