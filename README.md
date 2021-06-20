@@ -1,16 +1,27 @@
-# avaliacao-sprint-4
-Projetos chatbot Rasa
+![alt text](https://d2vkoy1na2a6o6.cloudfront.net/images/logos/logo-c66376ed06cce60a01849443a90be276dfcf2cebfda477fff2b90bd66397210229adf8c9ba9243fb30bf4299ec267633d17a14fb73e80177a0a8109b15cf74c3.png)
 
-## Execução
-- Com base no trabalho da primeira Sprint (https://github.com/daniel-compasso/avaliacao-sprint-1), crie um chatbot para consulta às informações disponibilizadas no banco de dados MongoDB. Caso o trabalho já seja voltado a questões, 
-- Ao iniciar o bot, obtenha os dados da api e grave no banco
-- Os dados solicitados durante o uso do bot devem ser consultados partir do MongoDB;
-- O bot deve ser implementado em Rasa e deve usar o Spacy em Português;
-- Devem ser utilizados os recursos de formulário e entidade no bot;
-- O bot deve estar preparado para responder a qualquer momento qual é sua função, despedir-se e mencionar a não compreensão de texto (fallback);
-- Deve ser possível usar como webchat. 
+# Hearthstone API
+> Disponível em: https://hearthstonejson.com/
 
-## Entrega
-- Criar uma branch no repositório com o nome avalicao-nome-sobrenome (Exemplo: avaliacao-daniel-muller);
-- Subir o desafio na branch com um readme.md, explicando sobre o que foi feito no desafio;
-- Subir o desafio até às 13h do dia 21/06/2021 neste repositório (https://github.com/daniel-compasso/avaliacao-sprint-4/).
+> https://api.hearthstonejson.com/v1/
+
+
+## Victor Balbino Araujo
+
+# RASA Chatbot🤖💬
+- Criação de um Chatbot que dado o nome de uma carta, retorna suas informações.
+
+Para iniciar o bot, basta digitar "oi".
+Assim que iniciado, digite o nome do card que deseja procurar.
+
+Exemplo: Pyroblast
+![image](https://user-images.githubusercontent.com/73204740/122687491-1d106480-d1ed-11eb-93b9-0f092e194aae.png)
+
+Exemplo: Leeroy Jenkins
+![image](https://user-images.githubusercontent.com/73204740/122687527-43360480-d1ed-11eb-961a-bb0e85531678.png)
+
+Exemplo: Sword of Justice
+![image](https://user-images.githubusercontent.com/73204740/122687578-8e501780-d1ed-11eb-9842-3c1e76b74cdc.png)
+
+- Uso de slots, forms e actions
+- Webchat
