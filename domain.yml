@@ -8,6 +8,8 @@ intents:
 - nome
 - um_bot
 - tchau
+- confirma
+- cancelar
 entities:
 - LOC
 - MISC
@@ -39,6 +41,8 @@ responses:
   - text: Desculpe, ainda estou aprendendo, pode escrever de outra maneira?
   utter_tchau:
   - text: Tchau, até logo!
+  utter_novo_cep:
+  - text: Consultar novo cep (sim/não)?
 actions:
 - action_bem_vindo
 - utter_desculpa

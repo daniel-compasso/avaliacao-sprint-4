@@ -36,3 +36,19 @@ nlu:
     - xau
     - ate logo
     - ate mais
+- intent: confirma
+  examples: |
+    - sim
+    - siim
+    - claro
+    - isso
+    - s
+    - pode
+- intent: cancelar
+  examples: |
+    - não
+    - nao
+    - n
+    - nunca
+    - não quero
+
