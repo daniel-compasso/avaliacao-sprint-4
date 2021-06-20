@@ -1,0 +1,22 @@
+version: "2.0"
+
+rules:
+
+- rule: formulario do nome
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: nome_form
+  - active_loop: nome_form
+  
+- rule: desliga formulario do nome
+  condition:
+  - active_loop: nome_form
+  steps:
+  - action: nome_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: validate_nome_form
+  - action: utter_goodbye
+  - action: action_restart

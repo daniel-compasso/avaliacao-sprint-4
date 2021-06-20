@@ -1,0 +1,31 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - oi
+    - olá
+    - como vai?
+    - tudo bem?
+    - bom dia!
+    - boa tarde
+    - belê
+    - aoba
+    - suave
+    - opa
+    - tarde
+    - bão
+    - fala ae
+    - olá, eu sou o Daniel
+    - salve, aqui é o Matheus
+    - Me chamo João da Silva
+    - Renato Russo, muito prazer
+    - Meu nome é Maria Silvina
+    - oi eu sou João
+- intent: goodbye
+  examples: |
+    - tchau
+    - falou
+    - até mais
+    - até depois
+    - indo embora
+  

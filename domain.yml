@@ -1,0 +1,36 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+# entities:
+#   - PER
+#   - ORG
+#   - LOC
+#   - MISC
+slots:
+  nome:
+    type: text
+    influence_conversation: true
+  senderid:
+    type: text
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: "Entre com o nome do card: "
+  utter_goodbye:
+  - text: Tchau
+  utter_desculpa:
+  - text: Desculpe, estou ainda aprendendo, poderia escrever de outra forma?
+actions:
+- action_get_card
+- utter_greet
+- validate_nome_form
+forms:
+  nome_form:
+    required_slots:
+      nome:
+      - type: from_text
+        #entity: PER
