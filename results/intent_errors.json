@@ -1,0 +1,10 @@
+[
+  {
+    "text": "tudo bem",
+    "intent": "mood_happy",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5166773200035095
+    }
+  }
+]

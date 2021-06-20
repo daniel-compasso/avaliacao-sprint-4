@@ -1,0 +1,58 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- oi
+- cep
+- nome
+- um_bot
+- tchau
+entities:
+- LOC
+- MISC
+- ORG
+- PER
+slots:
+  nome:
+    type: text
+    influence_conversation: true
+  cep:
+    type: text
+    influence_conversation: true
+  senderid:
+    type: text
+    influence_conversation: false
+responses:
+  utter_bot:
+  - text: Você está falando com um bot, criado com Rasa
+  utter_ask_nome:
+  - text: Olá, qual é o seu nome?
+  - text: Oi, poderia informa o seu nome?
+  - text: Opa, eu gostaria de saber o seu nome?
+  utter_ask_cep:
+  - text: Olá {nome}, qual é cep da sua residência ex 999999999 (8 dígitos)?
+  utter_obrigado:
+  - text: Obrigado por usar nosso sistema Busca Cep 😘😘
+  - text: Até Logo o sistema Busca Cep agradeçe😘😘
+  utter_desculpa:
+  - text: Desculpe, ainda estou aprendendo, pode escrever de outra maneira?
+  utter_tchau:
+  - text: Tchau, até logo!
+actions:
+- action_bem_vindo
+- utter_desculpa
+- utter_obrigado
+- validate_cep_form
+- validate_nome_form
+forms:
+  nome_form:
+    required_slots:
+      nome:
+      - type: from_text
+        entity: PER
+  cep_form:
+    required_slots:
+      cep:
+      - type: from_text
+        entity: cep

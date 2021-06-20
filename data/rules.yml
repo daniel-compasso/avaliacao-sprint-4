@@ -1,0 +1,46 @@
+version: "2.0"
+
+rules:
+
+
+- rule: Diga 'Eu sou um bot' sempre que o usuário desafiar
+  steps:
+  - intent: um_bot
+  - action: utter_bot
+
+- rule: Tchau
+  steps:
+  - intent: tchau
+  - action: utter_tchau
+
+- rule: formulario do nome
+  conversation_start: true
+  steps:
+  - intent: oi
+  - action: action_bem_vindo
+  - action: nome_form
+  - action: cep_form
+  - active_loop : nome_form
+  - active_loop : cep_form
+
+- rule: desliga formulario do nome
+  condition:
+  - active_loop : nome_form
+  - active_loop : cep_form
+  steps:
+  - action: nome_form
+  - action: cep_form
+  - active_loop : null 
+  - slot_was_set:
+    - requested_slot: null
+  - action: validate_cep_form
+
+  
+- rule: Fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_desculpa
+
+
+
+

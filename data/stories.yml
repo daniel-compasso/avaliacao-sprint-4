@@ -1,0 +1,41 @@
+version: "2.0"
+
+stories:
+
+- story: stories
+  steps:
+  - intent: oi
+  - action: action_bem_vindo
+  - action: nome_form
+  - active_loop: nome_form
+  - slot_was_set:
+    - requested_slot: nome
+  - slot_was_set:
+    - nome: rafael
+  - slot_was_set:
+    - senderid: 630a520901024761a244ab9ced527d4a
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: cep_form
+  - active_loop: cep_form
+  - slot_was_set:
+    - requested_slot: cep
+  - slot_was_set:
+    - cep: '11111111'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_cep_form
+  - action: utter_obrigado
+  - action: action_restart
+
+- story:  Fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_desculpa
+
+- story: Tchau
+  steps:
+  - intent: tchau
+  - action: utter_tchau

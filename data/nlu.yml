@@ -1,0 +1,38 @@
+version: "2.0"
+nlu:
+- intent: oi
+  examples: |
+    - oi
+    - como vai
+    - tudo bem
+    - bom dia
+    - boa tarde
+    - salve
+    - olá
+    - ola
+- intent: um_bot
+  examples: |
+    - você e um bot?
+    - você e um humano?
+    - eu estou falando com um bot?
+    - eu estou falando com um humano?
+    - sabe resolver o desafio do Turing?
+- intent: nome
+  examples: |
+    - rafael
+    - lucas
+    - daniel
+    - Caio
+- intent: cep
+  examples: |
+    - '11111111'
+    - '13848100'
+    - 96200003
+- intent: tchau
+  examples: |
+    - tchau
+    - bye bye
+    - xau xau
+    - xau
+    - ate logo
+    - ate mais
