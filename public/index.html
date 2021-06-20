@@ -4,30 +4,29 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bot de teste</title>
-    <link rel="stylesheet"
-        href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+    <title>TubeBot</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 
 <body>
-    <script type="text/javascript">
-        const ut = new SpeechSynthesisUtterance('No warning should arise');
-        speechSynthesis.speak(ut);
-    </script>
-    <div class="chat-container"></div>
-    <script
-        src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"></script>
 
-    <script type="text/javascript">
-        window.chatroom = new window.Chatroom({
-            host: "http://localhost:5005",
-            title: "BoTeste",
-            container: document.querySelector(".chat-container"),
-            welcomeMessage:"Olá!",
-            speechRecognition: "pt-BR",
-            voiceLang: "pt-BR"
-        });
-                window.chatroom.openChat();
-    </script>
+    <div class="chat-container">
+        <script type="text/javascript">
+            const ut = new SpeechSynthesisUtterance('No warning should arise');
+            speechSynthesis.speak(ut);
+        </script>
+        <script
+            src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"></script>
+    
+        <script type="text/javascript">
+            window.chatroom = new window.Chatroom({
+                host: "http://localhost:5005",
+                title: "L3-37",
+                container: document.querySelector(".chat-container"),
+                welcomeMessage:"Olá!",
+            });
+                    window.chatroom.openChat();
+        </script>
+    </div>
     </body>    
 </html>
