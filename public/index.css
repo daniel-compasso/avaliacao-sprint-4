@@ -47,7 +47,7 @@ body {
 }
 
 .chatroom .chats .chat{
-    background:#35b7d4;
+    background:#ff5555;
     position:relative;
     padding:5px 13px;
     font-size:14px;
@@ -84,7 +84,7 @@ body {
 
 .chatroom .chats .chat a{
     text-decoration:none;
-    color:#3498db
+    color:#8be9fd
 }
 
 .chatroom .chats .chat ol,.chatroom .chats .chat ul{
@@ -132,7 +132,7 @@ body {
     clear:both;
     height:10px;
     font-size:10px;
-    color:#50fa7abe;
+    color:#f8f8f2;
     margin:5px 0 20px
 }
 
@@ -199,7 +199,7 @@ body {
 }
 
 .chatroom .input input[type=submit]{display:inline-block;
-    background:#25d350;
+    background:#ff5555;
     border:1px solid #fff;
     color:#fff;
     height:35px;

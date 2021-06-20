@@ -27,7 +27,7 @@ responses:
   utter_goodbye:
   - text: Blz! Espero que eu tenha te ajudado! Até a próxima!
   utter_iamabot:
-  - text: Olá! Meu nome é TubeBot, e fui criado para que você possa encontrar os seus videos favoritos do YouTube!.
+  - text: Olá! Meu nome é RasaTube, e fui criado para que você possa encontrar os seus videos favoritos do YouTube!.
   utter_show_result:
   - text: Aqui está o que eu encontrei
   utter_desculpa:

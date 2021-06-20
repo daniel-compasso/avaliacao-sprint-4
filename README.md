@@ -1,5 +1,7 @@
 # Avaliação sprint 4 - Caio Gabriel Ferreira
 
+Esse projeto consiste em criar um chatbot que faz uma busca de video através da API do YouTube, e salva no banco de dados MongoDB
+
 ## Pré requisitos
 
 * Python3
