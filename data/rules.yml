@@ -5,6 +5,7 @@ rules:
 - rule: show video for the user
   steps:
   - intent: greet
+  - action: utter_iamabot
   - action: pesquisa_form
   - active_loop: pesquisa_form
 
@@ -12,6 +13,7 @@ rules:
   condition:
   - active_loop: pesquisa_form
   steps:
+  - action: utter_iamabot
   - action: pesquisa_form
   - active_loop: null
   - slot_was_set:
@@ -19,6 +21,16 @@ rules:
   - action: validate_pesquisa_form
   - action: utter_show_result
   - action: action_restart
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
 
 - rule: Fallback
   steps:

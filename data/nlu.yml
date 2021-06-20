@@ -9,17 +9,9 @@ nlu:
     - Eae
     - Oiee
     - oi
-    - olá, eu sou o [Daniel](nome)
-    - eaí [Bruno](nome)
-    - salve [Matheus](nome)
-    - Me chamo [João da Silva](nome)
-    - [Renato Russo](nome), muito prazer
-    - Meu nome é [Maria Silvina](nome)
-    - [Daniel](nome)
-    - oi eu sou [João](nome)
 - intent: goodbye
   examples: |
-    - chau
+    - Tchau
     - Até mais
     - Flw
     - adeus
@@ -28,12 +20,17 @@ nlu:
 - intent: affirm
   examples: |
     - sim
+    - siim
+    - siiiiim
+    - claaro
+    - ctza
     - isso
     - tá
     - ok
     - com certeza
     - isso aí
     - pode
+    - Sim
 - intent: deny
   examples: |
     - não
@@ -43,46 +40,13 @@ nlu:
     - não gosto disso
     - de jeito nenhum
     - Na verdade não
-- intent: mood_great
-  examples: |
-    - perfeito
-    - excelente
-    - incrível
-    - sentindo-se como um rei
-    - Maravilhoso
-    - Estou me sentindo muito bem
-    - Estou estou ótimo
-    - tudo ótimo
-    - super animado
-    - to legal
-    - tudo legal
-    - bem
-    - ótimo
-    - blz
-    - Bem
-- intent: mood_unhappy
-  examples: |
-    - meu dia foi horrível
-    - Estou triste
-    - Não me sinto muito bem
-    - Estou desapontado
-    - super triste
-    - Eu estou tão triste
-    - triste
-    - muito triste
-    - infeliz
-    - não é bom
-    - não muito bom
-    - extremamente triste
-    - tão saad
-    - tão triste
+    - Não
 - intent: bot_challenge
   examples: |
     - Você é um robô?
     - Você é um humano?
     - estou falando com um bot?
     - estou falando com um humano?
-    
 - intent: pesquisa
   examples: |
     - playlist rock
@@ -100,3 +64,7 @@ nlu:
     - homem de ferro
     - homem aranha
     - iron
+    - Tetris
+    - Iron
+    - Bullet
+    - Baby yoda

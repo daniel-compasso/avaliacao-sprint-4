@@ -18,40 +18,6 @@ from rasa_sdk.forms import FormValidationAction
 from rasa_sdk.types import DomainDict
 from rasa_sdk.events import SlotSet 
 
-class ValidaNomeForm(FormValidationAction):
-    """Verifica o nome do usuário"""
-
-    ##### Nome do form para o Rasa
-    def name(self) -> Text:
-        """Identifica o form na estória do Rasa."""
-        return "validate_nome_form"
-
-    ##### Validação do nome
-    def validate_nome(
-        self,
-        slot_value: Any,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> Dict[Text, Any]:
-        """Valida nome."""
-
-        print("NOME")
-        print(slot_value)
-        nome = slot_value
-        sai = tracker.get_slot("senderid")
-        if(sai == None):
-            volta = "!"
-            sai = tracker.sender_id
-        else:
-            volta = ", fico feliz com tua volta!"
-
-        texto = "Olá "+nome+volta
-        dispatcher.utter_message(text=texto)
-
-        return {"nome": nome, "senderid": sai}
-
-
 class ValidaTituloBusca(FormValidationAction):
     
     def name(self) -> Text:
@@ -67,6 +33,8 @@ class ValidaTituloBusca(FormValidationAction):
         pesquisa = slot_value
 
         print(pesquisa)
+        
+        #Lendo o arquivo de configuração, que irá proteger a chave da API
         config = ConfigParser()
         config.read('config.ini')
 
@@ -75,19 +43,22 @@ class ValidaTituloBusca(FormValidationAction):
         db = client.YoutubeResultados
         
         def mostrar_resultado(video):
-            dispatcher.utter_message(text=('Título: ' + video['TituloDoVideo']))
-            dispatcher.utter_message(text=('Url: https://www.youtube.com/watch?v=' + video['VideoId']))
-        
+            dispatcher.utter_message(image=(video['Thumbnail']))
+            dispatcher.utter_message(text=(video['TituloDoVideo']))
+            dispatcher.utter_message(text=('https://www.youtube.com/watch?v=' + video['VideoId']))
+
+        # Checando se a pesquisa existe no mongo
         if db.resultados.count_documents({'CacheKey':pesquisa}) > 0:
             print('Essa pesquisa já existe na nossa cache!')
             print(slot_value)
             resultado_do_banco = db.resultados.find({'CacheKey': pesquisa})
-
+            
             for item in resultado_do_banco:
                 dispatcher.utter_message(text=mostrar_resultado(item)) 
                 
         else:
-            
+            # Se a pesquisa não existe no mongo, será feito a busca direto da api
+            # parametros para serem usados no request
             params = {
                 'key': config['YOUTUBE_API']['apiKey'], 
                 'part': 'snippet', 
@@ -109,7 +80,7 @@ class ValidaTituloBusca(FormValidationAction):
                     #Em uma aplicação web pode ser usada a thumbnail
                     'Canal' : item['snippet']['channelTitle'],
                     'VideoId' : item['id']['videoId'],
-                    'Thumbnail' : item['snippet']['thumbnails']['default']['url'],
+                    'Thumbnail' : item['snippet']['thumbnails']['medium']['url'],
                     'TituloDoVideo' : item['snippet']['title'],
                     'Descricao' : item['snippet']['description']
                 }

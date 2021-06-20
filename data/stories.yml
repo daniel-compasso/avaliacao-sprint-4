@@ -1,19 +1,11 @@
 version: "2.0"
 
 stories:
-  
-#- story: formulario_nome
-#  steps:
-#    - intent: greet
-#    - action: utter_greet
-#    - action: nome_form
-#    - active_loop: nome_form
-#    - slot_was_set:
-#      - nome: Caio
 
 - story: pesquisar_video
   steps:
   - intent: greet
+  - action: utter_iamabot
   - action: pesquisa_form
   - active_loop: pesquisa_form
   - slot_was_set:
@@ -25,4 +17,37 @@ stories:
   - active_loop: null
   - action: validate_pesquisa_form
   - action: utter_show_result
+  - action: utter_ask_pesquisa_novamente
   - action: action_restart
+
+- story: pesquisa_denovo
+  steps:
+  - intent: affirm
+  - action: pesquisa_form
+  - active_loop: pesquisa_form
+  - slot_was_set:
+    - requested_slot: pesquisa
+  - slot_was_set:
+    - pesquisa: iron
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_pesquisa_form
+  - action: utter_show_result
+  - action: utter_ask_pesquisa_novamente
+  - action: action_restart
+
+- story: nao_pesquisar
+  steps:
+  - intent: deny
+  - action: utter_goodbye
+
+- story: despedida
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_desculpa

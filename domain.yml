@@ -2,15 +2,14 @@ version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-  
 intents:
-- greet
+- deny
 - pesquisa
+- greet
 - mood_great
 - search_video
 - goodbye
 - affirm
-- deny
 - mood_unhappy
 - bot_challenge
 
@@ -18,50 +17,33 @@ slots:
   pesquisa:
     type: text
     influence_conversation: true
-  
-  nome:
-    type: text
-    influence_conversation: true
 
+# Respostas do bot
 responses:
-  utter_greet:
-  - text: Ei! Qual é o seu nome?
-  utter_cheer_up:
-  - text: 'Aqui está algo para animá-lo:'
-    image: https://i.imgur.com/nGF1K8f.jpg
   utter_ask_pesquisa:
-  - text: Qual video quer ver hoje?
-  utter_happy:
-  - text: Dahora!
+  - text: Qual video gostaria de ver?
+  utter_ask_pesquisa_novamente:
+  - text: Gostaria de ver mais algum outro video?
   utter_goodbye:
-  - text: Tchau
+  - text: Blz! Espero que eu tenha te ajudado! Até a próxima!
   utter_iamabot:
-  - text: Eu sou um bot, criado para que você faça buscas dos seus videos favoritos do  YouTube.
+  - text: Olá! Meu nome é TubeBot, e fui criado para que você possa encontrar os seus videos favoritos do YouTube!.
   utter_show_result:
-  - text: 'Aqui está o que eu encontrei'
+  - text: Aqui está o que eu encontrei
   utter_desculpa:
   - text: Desculpe, estou ainda aprendendo, poderia escrever de outra forma?
-
 actions:
-- utter_did_that_help
+- utter_ask_pesquisa_novamente
 - utter_goodbye
-- utter_greet
+- utter_iamabot
 - utter_show_result
+- utter_desculpa
 - validate_pesquisa_form
-- validate_nome_form
 
-entities:
-- nome
-
+# Formulário para fazer a pesquisa no YouTube
 forms:
   pesquisa_form:
     required_slots:
       pesquisa:
       - type: from_text
         entity: pesquisa
-
-  nome_form:
-    required_slots:
-      nome:
-      - type: from_entity
-        entity: nome
