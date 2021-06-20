@@ -1,0 +1,27 @@
+stories:
+
+- story: comprimentando
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: resposta positiva
+  steps:
+  - intent: affirm
+  - action: utter_happy
+  
+- story: resposta positiva
+  steps:
+  - intent: ask_weather
+  - action: action_ask_weather
+  
+- story: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
