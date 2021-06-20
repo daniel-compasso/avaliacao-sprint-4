@@ -3,7 +3,7 @@ Projetos chatbot Rasa
 
 ## Execução
 - Com base no trabalho da primeira Sprint (https://github.com/daniel-compasso/avaliacao-sprint-1), crie um chatbot para consulta às informações disponibilizadas no banco de dados MongoDB. Caso o trabalho já seja voltado a questões, 
-- Ao iniciar o bot, obtenha os dados da api e grave no banco;
+- Ao iniciar o bot, obtenha os dados da api e grave no banco
 - Os dados solicitados durante o uso do bot devem ser consultados partir do MongoDB;
 - O bot deve ser implementado em Rasa e deve usar o Spacy em Português;
 - Devem ser utilizados os recursos de formulário e entidade no bot;
