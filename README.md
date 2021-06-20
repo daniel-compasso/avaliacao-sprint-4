@@ -12,6 +12,7 @@
 - Criação de um Chatbot que dado o nome de uma carta, retorna suas informações.
 
 Para iniciar o bot, basta digitar "oi".
+
 Assim que iniciado, digite o nome do card que deseja procurar.
 
 Exemplo: Pyroblast
