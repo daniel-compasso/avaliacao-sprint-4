@@ -1,4 +1,5 @@
 # Avaliação Sprint 4
+<p align="center"><img src = "https://kanto.legiaodosherois.com.br/w760-h398-cfill/wp-content/uploads/2019/12/legiao_RZ8tuWfaV2dYPDrnq49lIL0pcCJ7T3E_vAjgQUoxHh.png.jpeg"></p>
 
 ## Descrição
 - Desenvolvimento de um rasa.
