@@ -1,0 +1,123 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - oi
+    - olá
+    - eai
+    - como vai
+    - bom dia
+    - boa tarde
+    - tudo bem
+    - tem alguém ai
+    - bão
+    - olá cara
+    - fala ai
+    - beleza
+    - blz
+
+- intent: goodbye
+  examples: |
+    - boa tarde
+    - valeu
+    - até mais tarde
+    - boa noite
+    - tchau
+    - adeus
+    - tenha um bom dia
+    - Vejo você por aí
+    - tchau tchau
+    - até logo
+    - Tchau brigado
+
+- intent: affirm
+  examples: |
+    - sim
+    - s
+    - na verdade
+    - claro
+    - Isso soa bem
+    - correto
+    - axatamente
+    - com certeza
+    - claro, porque não
+
+- intent: deny
+  examples: |
+    - não
+    - n
+    - Nunca
+    - Acho que não
+    - não gosto disso
+    - de jeito nenhum
+    - Na verdade não
+    - jamais
+    - claramente que não
+    - sem comentários
+
+- intent: mood_great
+  examples: |
+    - perfeito
+    - excelente
+    - incrível
+    - sentindo-se como um rei
+    - Maravilhoso
+    - Estou me sentindo muito bem
+    - Estou ótimo
+    - Eu sou incrível
+    - Eu vou salvar o mundo
+    - super animado
+    - extremamente bem
+    - tão perfeito
+    - tão bom
+    - espetacular
+    - toperson
+    - incriveis
+
+- intent: mood_unhappy
+  examples: |
+    - meu dia foi horrível
+    - Estou triste
+    - Não me sinto muito bem
+    - Estou desapontado
+    - super triste
+    - Eu estou tão triste
+    - triste
+    - muito triste
+    - infeliz
+    - não é bom
+    - não muito bem
+    - extremamente triste
+    - tão saad
+    - tão triste
+
+- intent: bot_challenge
+  examples: |
+    - você é um bot?
+    - você é um humano?
+    - eu tô falando com um bot?
+    - eu tô falando com um humano?
+
+# - intent: ask_searching
+#   example: |
+#     - estou procurando por [Davy Hefforde](nome)
+#     - estou procurando por [Tory Eccleston](nome)
+#     - estou procurando por [Yank Lauks](nome)
+#     - estou procurando por [Stefania Werner](nome)
+#     - estou procurando por [Anita Bexley](nome)
+#     - estou procurando por [Cosette Doyle](nome)
+#     - estou procurando por [Daniele Ciani](nome)
+#     - estou procurando por [Angelina Gecks](nome)
+#     - estou procurando por [Lyon Weddeburn](nome)
+#     - estou procurando por [Birch Eagell](nome)
+#     - estou procurando por [Ardeen Matissoff](nome)
+#     - estou procurando por [Itch Lavall](nome)
+#     - estou procurando por [Aigneis Gristock](nome)
+#     - estou procurando por [Jesse Bergeon](nome)
+#     - estou procurando por [Ellwood Haighto](nome)
+#     - estou procurando por [Garik Malinson](nome)
+#     - estou procurando por [Genia Beyn](nome)
+#     - estou procurando por [Itch Cullrford](nome)
+#     - estou procurando por [Lorelle Brito](nome)
+#     - estou procurando por [Hilario Aitken](nome)
