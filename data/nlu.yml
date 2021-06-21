@@ -38,6 +38,8 @@ nlu:
     - renamon
     - koromon
     - patamon
+    - leomon
+    - ikkakumon
 
 - intent: não_conhece
   examples: |
@@ -79,3 +81,14 @@ nlu:
     - estou muito feliz
     - estou me sentindo bem
     - muito feliz
+
+# adicionando novas intents
+
+- intent: qual_seu_proposito
+  examples: |
+    - qual seu propósito?
+    - qual é sua função?
+    - qual é o seu dever?
+    - o que você faz?
+    - para que você serve?
+    - qual sua finalidade?
