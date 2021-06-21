@@ -18,11 +18,12 @@ Inicie o servidor Rasa em uma terceira janela do console:
    rasa run --enable-api
    ```
 
-   Você pode então enviar mensagens para o bot por meio do endpoint do canal de retorno de chamada:
+Você pode então enviar mensagens para o bot por meio do endpoint do canal de retorno de chamada:
    ```
    curl -XPOST http://localhost:5005/webhooks/callback/webhook \
       -d '{"sender": "tester", "message": "hello"}' \
       -H "Content-type: application/json"
       
+
 Para obter mais informações sobre os comandos individuais, verifique nossa
 [documentação](http://rasa.com/docs/rasa/command-line-interface).
