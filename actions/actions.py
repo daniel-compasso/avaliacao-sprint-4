@@ -35,7 +35,7 @@ class ActionPegandoDB(Action):
 
         
         if db.digimons.count_documents({})> 0:
-            print("O bando de dados ja existe\n")
+            print("O banco de dados ja existe\n")
         else:
             request = requests.get('https://digimon-api.herokuapp.com/api/digimon')
             todos   = json.loads(request.content)
