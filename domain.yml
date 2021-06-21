@@ -1,0 +1,62 @@
+version: "2.0"
+session_config:
+  session_experation_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_searching
+
+slots:
+  nome:
+    type: text
+    influence_conversation: true
+
+senderid:
+  type: text
+  influence_conversation: false
+
+responses:
+  utter_greet:
+  - text: "Eai, Como você vai?"
+
+  utter_cheer_up:
+  - text: "Vou mostrar algo que vai animalo:"
+    image: "https://www.imagenswiki.com/Uploads/imagenswiki.com/ImagensGrandes/cachorrinhos-husky.jpg"
+
+  utter_did_that_help:
+  - text: "Espero que isso te ajudou!."
+
+  utter_happy:
+  - text: "Muito bom, Prossiga"
+
+  utter_goodbye:
+  - text: "Tchau"
+  - text: "Tchau, espero te ver em breve"
+
+  utter_iamabot:
+  - text: "Eu sou Optimus Prime"
+  - text: "Eu Optimus Prime, e sou um autobot"
+
+  utter_desculpa:
+  - text: "Desculpa, estou apredendo algumas coisas ainda, poderia escreve de outra forma?"
+
+actions:
+- action_hello_world
+- utter_cheer_up
+- utter_did_that_help
+- utter_greet
+- utter_happy
+- action_ask_searching
+
+forms:
+  nome_form:
+    required_slots:
+      nome:
+      - type: from_text
