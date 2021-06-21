@@ -1,5 +1,4 @@
 # avaliacao-sprint-4
-Projetos chatbot Rasa
 ![rasa-4](https://user-images.githubusercontent.com/26391241/122766670-33afcd80-d278-11eb-97e2-8e7723290719.png)
 
 
