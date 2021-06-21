@@ -14,6 +14,7 @@ intents:
 - estou_triste
 - estou_feliz
 - não_quero
+- qual_seu_proposito 
 
 
 slots:
@@ -26,8 +27,8 @@ slots:
 
 responses:
   utter_ask_nome:
-  - text: Olá,Eu sou o Digibot, me diga um digimon e eu te mostro uma foto dele!
-  - text: Oi, Eu sou o Digibot, me mande o nome de um digimon e eu te mostro a foto dele!
+  - text: Eu sou o Digibot, me diga um digimon e eu te mostro uma foto dele!
+  - text: Eu sou o Digibot, me mande o nome de um digimon e eu te mostro a foto dele!
 
   utter_como_vai:
   - text: Oi! Como vai?
@@ -37,9 +38,9 @@ responses:
 
   utter_algo_para_se_animar:
   - text: Ouça essa música, tenho certeza que vai digievoluir sua autoestima!
-    image: https://www.youtube.com/watch?v=b1uH4BnswKQ
+          https://www.youtube.com/watch?v=b1uH4BnswKQ
   - text: Que tal essa música? Tenho certeza que vai digievoluir sua autoestima!
-    image: https://www.youtube.com/watch?v=kH2j6dKPwxo
+          https://www.youtube.com/watch?v=kH2j6dKPwxo
 
   utter_happy:
   - text: Confiante como um Leomon!
@@ -64,6 +65,15 @@ responses:
   utter_eu_te_mostro:
   - text: Tem o Agumon, Gabumon, Veemon, Patamon, escolha um!
   - text: Que tal o Ikkakumon ou Leomon!
+
+  # adicionando mais utters
+
+  utter_tchau:
+  - text: Mais já? então até a próxima!
+  - text: Volte sempre que quiser fotos de digimons!
+
+  utter_proposito:
+  - text: Meu dever é buscar imagens dos digimons que você pedir
 
 actions:
 - utter_ask_nome
