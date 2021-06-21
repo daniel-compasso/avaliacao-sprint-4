@@ -13,7 +13,9 @@ slot:
 
 responses:
   utter_greet:
-  - text: "Qual seu nome?: "
+  - text: Qual seu nome?
+  utter_desculpa:
+  - text: desculpe, não entendi!
   utter_goodbye:
   - text: Tchau
 
