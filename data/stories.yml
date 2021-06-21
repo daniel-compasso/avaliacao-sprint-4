@@ -28,6 +28,22 @@ stories:
   - action: utter_goodbye
   - action: action_restart
 
+- story: direto                       
+  steps:
+  - intent: nome
+  - action: nome_form
+  - active_loop: nome_form 
+  - slot_was_set:
+    - requested_slot: nome
+  - slot_was_set:
+    - nome: 'agumon'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_nome_form
+  - action: utter_goodbye
+  - action: action_restart
+
 # - story: fluxo_de_conversa_triste
 #   steps:
 #   - intent: greet
