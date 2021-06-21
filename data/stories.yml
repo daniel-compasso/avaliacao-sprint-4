@@ -1,0 +1,92 @@
+version: "2.0"
+
+stories:
+
+- story: testando bot
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: option_form
+  - active_loop: option_form
+  - slot_was_set:
+    - requested_slot: option
+  - slot_was_set:
+    - option: '1'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: consulta_mongo
+
+# - story: happy path 1
+#   steps:
+#   - intent: greet
+#   - action: nome_form
+#   - active_loop: nome_form
+#   - slot_was_set:
+#     - nome: Daniel
+#   - intent: mood_great
+#   - action: utter_happy
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: happy path 2
+#   steps:
+#   - intent: greet
+#   - action: nome_form
+#   - active_loop: nome_form
+#   - slot_was_set:
+#     - nome: Daniel
+#   - intent: mood_great
+#   - action: utter_happy
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: nome_form
+#   - active_loop: nome_form
+#   - slot_was_set:
+#     - nome: Daniel
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: nome_form
+#   - active_loop: nome_form
+#   - slot_was_set:
+#     - nome: Daniel
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: nome_form
+#   - active_loop: nome_form
+#   - slot_was_set:
+#     - requested_slot: nome
+#   - slot_was_set:
+#     - nome: Daniel
+#   - slot_was_set:
+#     - senderid: 22bc1179f2334329b5f7c2f481ef2989
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+

@@ -1,0 +1,25 @@
+version: "2.0"
+
+rules:
+
+- rule: inicia o bot
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: option_form
+  - active_loop: option_form
+
+- rule: fecha form
+  condition:
+  - active_loop: option_form
+  steps:
+  - action: option_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: consulta_mongo
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
