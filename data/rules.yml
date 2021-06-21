@@ -10,15 +10,6 @@ rules:
   - action: nome_form
   - active_loop: nome_form
 
-  # - intent: goodbye
-  # - action: utter_goodbye
-
-# - rule: formulario do nome
-#   steps:
-#   - intent: greet
-#   - action: nome_form
-#   - active_loop: nome_form
-  
 - rule: desliga formulario do nome
   condition:
   - active_loop: nome_form
@@ -36,12 +27,40 @@ rules:
   - intent: qualquer_um
   - action: utter_eu_te_mostro
 
+# adicionando novas rules 
 
+- rule: triste
+  steps:
+  - intent: estou_triste
+  - action: utter_algo_para_se_animar
 
-# - rule: Say goodbye anytime the user says goodbye
-#   steps:
-#   - intent: goodbye
-#   - action: utter_goodbye
+- rule: Tchau
+  steps:
+  - intent: goodbye
+  - action: utter_tchau
+
+- rule: propósito
+  steps:
+  - intent: qual_seu_proposito 
+  - action: utter_proposito 
+
+- rule: direto                       
+  steps:
+  - intent: nome
+  - action: nome_form
+  - active_loop: nome_form 
+
+- rule: desliga formulario do nome 2
+  condition:
+  - active_loop: nome_form
+  steps:
+  - action: nome_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: validate_nome_form
+  - action: utter_goodbye
+  - action: action_restart
 
 # - rule: Say 'I am a bot' anytime the user challenges
 #   steps:
