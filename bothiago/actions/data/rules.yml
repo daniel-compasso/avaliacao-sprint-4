@@ -10,5 +10,10 @@ rules:
   - action: nome_form
   - active_loop : nome_form
 
+rule: fallback
+steps:
+- intent: nlu_fallback
+- action: utter_desculpa
+
 
 
