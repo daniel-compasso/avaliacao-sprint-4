@@ -1,0 +1,50 @@
+version: "2.0"
+
+rules:
+
+- rule: fluxo de conversa
+  steps:
+  - intent: greet
+  - action: utter_como_vai
+  - action: action_pegando_db
+  - action: nome_form
+  - active_loop: nome_form
+
+  # - intent: goodbye
+  # - action: utter_goodbye
+
+# - rule: formulario do nome
+#   steps:
+#   - intent: greet
+#   - action: nome_form
+#   - active_loop: nome_form
+  
+- rule: desliga formulario do nome
+  condition:
+  - active_loop: nome_form
+  steps:
+  - action: nome_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: validate_nome_form
+  - action: utter_goodbye
+  - action: action_restart
+
+- rule: qualquer digimon
+  steps:
+  - intent: qualquer_um
+  - action: utter_eu_te_mostro
+
+
+
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+

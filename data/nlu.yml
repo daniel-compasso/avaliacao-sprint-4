@@ -1,0 +1,81 @@
+version: "2.0"
+nlu:
+  
+- intent: greet
+  examples: |
+    - oi
+    - olá
+    - como vai?
+    - tudo bem?
+
+- intent: goodbye
+  examples: |
+    - tchau
+    - falou
+    - até mais
+    - até
+    - até a próxima
+    - até
+    - ja vou indo
+    - ja vou
+    - flw
+    - tcha
+  
+- intent: affirm
+  examples: |
+    - sim
+    - isso
+    - tá
+    - ok
+    - com certeza
+    - isso aí
+    - pode
+
+- intent: nome
+  examples: |
+    - agumon
+    - gabumon
+    - renamon
+    - koromon
+    - patamon
+
+- intent: não_conhece
+  examples: |
+    - não conheço nenhum
+    - não sei
+    - esqueci o nome
+    - não faço ideia
+
+
+- intent: qualquer_um
+  examples: |
+    - qualquer um
+    - qual você indica?
+    - pode ser qualquer um
+    - você escolhe
+
+- intent: não_quero
+  examples: |
+    - não quero
+    - não
+    - nem
+    - talvez depois
+    - não estou afim
+
+- intent: estou_triste
+  examples: |
+    - não me sinto bem
+    - estou triste
+    - triste
+    - infeliz
+    - deprimido
+    - estou deprimido
+    - com vontade de chorar
+
+- intent: estou_feliz
+  examples: |
+    - estou feliz
+    - animado
+    - estou muito feliz
+    - estou me sentindo bem
+    - muito feliz

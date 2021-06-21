@@ -1,0 +1,53 @@
+version: "2.0"
+
+stories:
+
+# - story: fluxo_de_conversa_não_quer
+#   steps:
+#   - intent: greet
+#   - action: utter_como_vai
+#   - intent: não_quero
+#   - action: utter_ahh
+
+
+- story: fluxo_de_conversa_positiva
+  steps:
+  - intent: greet
+  - action: utter_como_vai
+  - action: action_pegando_db
+  - action: nome_form
+  - active_loop: nome_form
+  - slot_was_set:
+    - requested_slot: nome
+  - slot_was_set:
+    - nome: 'agumon'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: validate_nome_form
+  - action: utter_goodbye
+  - action: action_restart
+
+# - story: fluxo_de_conversa_triste
+#   steps:
+#   - intent: greet
+#   - action: utter_como_vai
+#   - action: utter_como_vai
+#   - intent: estou_triste
+#   - action: utter_algo_para_se_animar
+
+# - story: fluxo_de_conversa_feliz
+#   steps:
+#   - intent: greet
+#   - action: utter_como_vai
+#   - action: utter_como_vai
+#   - intent: estou_feliz
+#   - action: utter_happy
+
+# - story: tchau
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+
+
