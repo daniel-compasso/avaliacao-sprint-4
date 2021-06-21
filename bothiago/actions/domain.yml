@@ -1,0 +1,30 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+
+slot:
+  nome:
+    type: text
+  senderid:
+    type: text
+    influence_conversation: false
+
+responses:
+  utter_greet:
+  - text: "Qual seu nome?: "
+  utter_goodbye:
+  - text: Tchau
+
+actions:
+- action_get_form
+- utter_greet
+- validate_nome_form
+
+forms:
+  nome_form:
+    required_slots:
+      nome:
+        type: from_text
+

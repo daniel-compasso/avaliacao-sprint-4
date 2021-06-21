@@ -1,0 +1,14 @@
+version: "2.0"
+
+rules:
+
+- rule: formulario do nome
+  conversation_start: true
+  steps:
+  - intent: oi
+  - action: action_bem_vindo
+  - action: nome_form
+  - active_loop : nome_form
+
+
+

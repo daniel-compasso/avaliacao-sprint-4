@@ -1,0 +1,20 @@
+version: "2.0"
+
+stories:
+
+  - story: stories
+  steps:
+  - intent: oi
+  - action: action_bem_vindo
+  - action: nome_form
+  - active_loop: nome_form
+  - slot_was_set:
+    - requested_slot: nome
+  - slot_was_set:
+    - nome: thiago
+  - slot_was_set:
+
+  
+
+
+
