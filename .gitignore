@@ -6,10 +6,16 @@ __pycache__/
 # C extensions
 *.so
 
+# Rasa
+models/
+results/
+story_graph.dot
+graph.html
+*.db*
+
 # Distribution / packaging
 .Python
 build/
-models/
 develop-eggs/
 dist/
 downloads/
