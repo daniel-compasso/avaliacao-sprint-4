@@ -130,5 +130,4 @@ dmypy.json
 
 config.ini
 story_graph.dot
-
-models
+models/
