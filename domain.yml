@@ -1,24 +1,42 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- deny
-- pesquisa
-- greet
-- mood_great
-- search_video
-- goodbye
-- affirm
-- mood_unhappy
-- bot_challenge
-
+- deny:
+    use_entities: true
+- pesquisa:
+    use_entities: true
+- greet:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- search_video:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+entities: []
 slots:
   pesquisa:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
-
-# Respostas do bot
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_ask_pesquisa:
   - text: Qual video gostaria de ver?
@@ -39,11 +57,10 @@ actions:
 - utter_show_result
 - utter_desculpa
 - validate_pesquisa_form
-
-# Formulário para fazer a pesquisa no YouTube
 forms:
   pesquisa_form:
     required_slots:
       pesquisa:
-      - type: from_text
-        entity: pesquisa
+      - entity: pesquisa
+        type: from_text
+e2e_actions: []
