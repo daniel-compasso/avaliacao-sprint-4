@@ -6,8 +6,8 @@ import requests
 import geocoder
 import json
 
-openweathermap_KEY = '4e813866cb5b3cd562d3c7a0b7bca99a'
-tomtom_KEY = 'l7BHMV8QTASNZPyYZC7EJ7xhoRAXRS1l'
+openweathermap_KEY = 'xxxxxx'
+tomtom_KEY = 'xxxxxx'
 
 class ActionAskWeather(Action):
     def name(self) -> Text:
