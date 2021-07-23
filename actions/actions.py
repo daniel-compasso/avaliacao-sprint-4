@@ -125,7 +125,7 @@ class menu(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         dispatcher.utter_message(text='''
 [1] - Para escolha dos Filmes
-[2] - Para escolha das Pessoa
+[2] - Para escolha das Pessoas
 [3] - Para escolha dos Planetas
 [4] - Para escolha das Espécies
 [5] - Para escolha das Naves
