@@ -6,7 +6,6 @@ stories:
 - story: interactive_story
   steps:
   - intent: greet
-  - action: utter_wait 
   - action: consulta_api
   - action: utter_greet
   - action: utter_menu

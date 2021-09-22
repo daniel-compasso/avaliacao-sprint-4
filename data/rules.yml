@@ -4,8 +4,7 @@ rules:
 
 - rule: inicia o bot
   steps:
-  - intent: greet
-  - action: utter_wait  
+  - intent: greet 
   - action: consulta_api
   - action: utter_greet
   - action: utter_menu

@@ -15,8 +15,6 @@ intents:
 - train
 
 responses:
-  utter_wait:
-  - text: Olá padawan, um segundo por favor!
   utter_greet:
   - text: Me chamo L3-37, sou um bot especializado no universo de Star Wars
   utter_menu:
@@ -30,7 +28,6 @@ actions:
 - cria_menu
 - utter_greet
 - utter_menu
-- utter_wait
 - validate_option_form
 
 slots:

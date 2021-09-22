@@ -136,7 +136,7 @@ class menu(Action):
 #classe para coletar a opção do slot e coletar dados do mongodb
 class dados(FormValidationAction):
     def name(self) -> Text:
-        """Identifica o form na estória do Rasa."""
+        """Identifica o form na história do Rasa."""
         return "validate_option_form"
     
     def validate_option(
