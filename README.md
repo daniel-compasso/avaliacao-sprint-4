@@ -23,3 +23,11 @@ rasa run -m models --enable-api --cors "*" --debug
 Após isto, foi aberto o arquivo index.html.
 
 
+<img src="https://github.com/daniel-compasso/avaliacao-sprint-4/blob/avaliacao-vanessa-rotoli/img/Oi.png" style="width:1000px;height:250px;"/>
+
+<img src="https://github.com/daniel-compasso/avaliacao-sprint-4/blob/avaliacao-vanessa-rotoli/img/Previs%C3%A3o.png" style="width:1000px;height:250px;"/>
+
+<img src="https://github.com/daniel-compasso/avaliacao-sprint-4/blob/avaliacao-vanessa-rotoli/img/index.png" style="width:1000px;height:500px;"/>
+
+
+
